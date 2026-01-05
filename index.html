@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Course Platform</title>
+    <title>AiTech - Learn Anything, Anytime</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -21,9 +21,11 @@
 
 <!-- Hero Section -->
 <section id="home" class="hero">
-    <h1>Learn Anything, Anytime!</h1>
-    <p>Join thousands of students learning online</p>
-    <button>Get Started</button>
+    <div class="hero-content">
+        <h1>Learn Anything, Anytime!</h1>
+        <p>Join thousands of students upgrading their skills online</p>
+        <button>Get Started</button>
+    </div>
 </section>
 
 <!-- Courses Section -->
@@ -31,16 +33,22 @@
     <h2>Our Popular Courses</h2>
     <div class="course-grid">
         <div class="course-card">
+            <div class="course-icon">💻</div>
             <h3>Web Development</h3>
             <p>HTML, CSS, JavaScript, React</p>
+            <button>Enroll Now</button>
         </div>
         <div class="course-card">
+            <div class="course-icon">🐍</div>
             <h3>Python Programming</h3>
             <p>Python Basics, Data Science, AI</p>
+            <button>Enroll Now</button>
         </div>
         <div class="course-card">
+            <div class="course-icon">🎨</div>
             <h3>Graphic Design</h3>
             <p>Photoshop, Illustrator, Figma</p>
+            <button>Enroll Now</button>
         </div>
     </div>
 </section>
@@ -50,7 +58,7 @@
     <h2>About AiTech</h2>
     <p>
         AiTech is a platform for learners to upgrade their skills online.  
-        Learn from experts and grow your career!
+        Learn from experts and grow your career with real projects and hands-on training!
     </p>
 </section>
 
@@ -85,9 +93,29 @@
 <footer id="contact">
     <h2>Contact Us</h2>
     <p>Email: contact@AiTech.com</p>
+    <div class="socials">
+        <a href="#">🐦</a>
+        <a href="#">📘</a>
+        <a href="#">📸</a>
+    </div>
+    <p>Subscribe for Updates:</p>
+    <input type="email" placeholder="Enter your email">
+    <button>Subscribe</button>
     <p>© 2026 AiTech</p>
 </footer>
 
+<!-- JS for scroll animations -->
+<script>
+const testimonials = document.querySelectorAll('.testimonial');
+window.addEventListener('scroll', () => {
+    testimonials.forEach(t => {
+        const top = t.getBoundingClientRect().top;
+        if(top < window.innerHeight - 100) {
+            t.classList.add('visible');
+        }
+    });
+});
+</script>
+
 </body>
 </html>
-
